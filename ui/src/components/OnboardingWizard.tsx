@@ -856,7 +856,7 @@ export function OnboardingWizard() {
                             value: "copilot_local" as const,
                             label: "GitHub Copilot",
                             icon: Bot,
-                            desc: "OAuth-authenticated Copilot agent"
+                            desc: "Local Copilot agent"
                           },
                           {
                             value: "hermes_local" as const,

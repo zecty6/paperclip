@@ -1,7 +1,7 @@
 import type { AdapterSessionCodec } from "@paperclipai/adapter-utils";
 
 export const type = "copilot_local";
-export const label = "GitHub Copilot (OAuth)";
+export const label = "GitHub Copilot (local)";
 
 export const DEFAULT_COPILOT_LOCAL_MODEL = "claude-sonnet-4.6";
 
@@ -82,8 +82,9 @@ export const agentConfigurationDoc = `# copilot_local agent configuration
 
 Adapter: copilot_local
 
-This adapter uses the GitHub Copilot CLI (\`copilot\` binary, npm package \`@github/copilot\`) as the agent runtime,
-authenticated via OAuth device flow built into the CLI.
+This adapter runs the GitHub Copilot CLI (\`copilot\` command, installed via
+\`npm install -g @github/copilot\`). Authenticate with \`copilot login\` or by
+setting COPILOT_GITHUB_TOKEN in the agent's environment config.
 
 Core fields:
 - cwd (string, optional): default absolute working directory fallback for the agent process (created if missing when possible)
@@ -102,7 +103,7 @@ Operational fields:
 - graceSec (number, optional): SIGTERM grace period in seconds
 
 Authentication:
-- Primary: run \`copilot login\` (OAuth device flow built into CLI)
+- Primary: run \`copilot login\` (browser-based sign-in built into the CLI)
 - Env vars (in priority order): COPILOT_GITHUB_TOKEN > GH_TOKEN > GITHUB_TOKEN
 
 Notes:

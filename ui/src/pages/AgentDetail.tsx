@@ -1066,7 +1066,7 @@ function CopilotLoginSection({ agentId, companyId }: { agentId: string; companyI
 
   return (
     <div className="space-y-3">
-      <h3 className="text-sm font-medium">GitHub Copilot OAuth</h3>
+      <h3 className="text-sm font-medium">GitHub Copilot Login</h3>
       <div className="space-y-2">
         <Button
           variant="outline"

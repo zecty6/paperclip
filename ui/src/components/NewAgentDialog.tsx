@@ -71,7 +71,7 @@ const ADVANCED_ADAPTER_OPTIONS: Array<{
     value: "copilot_local",
     label: "GitHub Copilot",
     icon: Bot,
-    desc: "OAuth-authenticated Copilot agent",
+    desc: "Local Copilot agent",
   },
   {
     value: "hermes_local",
